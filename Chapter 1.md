@@ -1,6 +1,3 @@
-# this is the First cpp book 
-**las goo dive into it **
-yo yo yo 
-## important yo 
--yo 1
--yo 2
+# Chapter 1 
+- [x] Task 1 (done)
+- [ ] Task 2 (to do)

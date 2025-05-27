@@ -4,10 +4,10 @@ tasks about to be done in this Chapter
 **• Function**  
 <span style="color:red">return type function name (parameter list)</span> 
 {function body ➜➜ __block of statements__}
-<pre>``` ★ int main()
+<pre>★ int main()
 {  
     Return 0; ➜ Terminates The Function
-} ```</pre>
+}</pre>  
 • Use a data structure to hold the data  
 • Test whether two records have the same ISBN  
 • Contain a loop that will process every record in the transaction file  

@@ -5,10 +5,10 @@
 ### Why <> instead of ""? `Interview Question`
 ```Cpp
 #include <iostream>     // Tells the compiler to include the standard I/O library
-#include "MyHeader.hpp" // Tells the compiler to Look for this file in your current folder or project --> Typically used for your own custom headers.
+#include "MyHeader.hpp" // Tells the compiler to look for this file in your current folder or project --> Typically used for your own custom headers.
 ```
 
-`;` is put to end a statement but it isn't needed in :
+`;` is put to end a statement, but it isn't needed in :
 
 - Declaration blocks: Function Definitions, Special Variables
 - Preprocessor lines like #include <iostream>
@@ -45,7 +45,7 @@ Output --> Orange
 | Safety                        | Safer, easier to use	| More dangerous, used in low-level tricks |  
 
 ```cpp
-Union Objects 
+union Objects 
 {
   string name;
   string shape;
@@ -56,7 +56,7 @@ Union Objects
 int main()
 {
   Objects Orange;
-  Orange.name = "Orange";
+  Orange.name  = "Orange";
   Orange.shape = "Circular";
   Orange.color = 22;
 cout<<Orange.name<<endl;
@@ -69,13 +69,13 @@ Output --> Orange
 ```cpp
 enum Devices
 {
-  Fridge,           // 0
-  Washing_Machine,  // 1
-  Microwave,        // 2
-  Oven,             // 3
-  Television,       // 4
-  Heater,           // 5
-  AC,               // 6
+  Fridge,          	 // 0
+  Washing_Machine,  	 // 1
+  Microwave,     	 // 2
+  Oven,           	 // 3
+  Television,     	 // 4
+  Heater,         	 // 5
+  AC,                    // 6
 }; 
 
 int main()
@@ -87,3 +87,85 @@ return 0;
 ```
 Output --> 4
 
+4. - [x] **`Typedef`**
+
+to Nickname the variable 
+```cpp
+typedef unsigned long long ULL;
+int main ()
+{
+ULL KIX = 5;
+cout<< KIX ;
+return 0;
+}
+```
+Output --> 5
+
+## ✅ Tasks
++ Write  A Combined Example
+```CPP
+typedef enum
+{
+	red,
+	green,
+	blue, //--> you don't need the last comma    
+} Pixels;
+
+typedef struct
+{
+	int width;
+	int height;
+	Pixels color;
+} Photo;
+
+int main()
+{
+Photo p1 = {1920, 1080, blue} ; //don't forget the ;
+cout<<p1.color<<endl;
+cout<<p1.width;
+return 0;
+}
+```
+Output --> 2
+           1920
+	   
+5. - [x] **`auto`**
+is used to automatically deduce the type of the variable based on the value assigned
+```CPP
+int main()
+{
+   auto var1(20);
+   auto var2(20.1);
+   auto var3(20.2f);
+   auto var4(20l);
+   auto var5(20ull);
+
+   cout<< "the size of Var1 = "<<sizeof(var1)<<"bytes"<<endl;
+   cout<< "the size of Var2 = "<<sizeof(var2)<<"bytes"<<endl;
+   cout<< "the size of Var3 = "<<sizeof(var3)<<"bytes"<<endl;
+   cout<< "the size of Var4 = "<<sizeof(var4)<<"bytes"<<endl;
+   cout<< "the size of Var5 = "<<sizeof(var5)<<"bytes" ;
+}
+```
+Output -->
+the size of Var1 = 4bytes
+
+the size of Var2 = 8bytes
+
+the size of Var3 = 4bytes
+
+the size of Var4 = 4bytes
+
+the size of Var5 = 8bytes
+
+
+## <details>
+  <summary>🧠 **REFLECTION (DAY 5)** 🔍</summary>
+
+## 🧠 REFLECTION (DAY 5)
+
+- Realized how `shared_ptr` uses reference counting.
+- Rewatched a tutorial — still unclear about cycles.
+- Will journal the confusion and come back tomorrow.
+
+</details>

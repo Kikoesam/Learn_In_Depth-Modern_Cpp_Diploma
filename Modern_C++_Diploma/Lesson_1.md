@@ -175,18 +175,134 @@ return 0;
 }
 ```
 
-Input  --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
+Input   --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 
 Output --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 </details>
 
 
 ## LOOPS:
-5. - [x] **`For Loop`**
+1. - [x] **`For Loop`**
 
 ```cpp
+for
+(
+   int i = 0;  // 1-initialization of the variable
+    i < 10     // 2-checking the condition, 5- check the condition again
+    i++        // 4-increment of the variable (1) by 1
+)
+{
+cout<<"Ker0seen"; // 3- implementing the body, 6-If the condition is true --> implement the body if not then break of the loop
+}
+```
+Output --> Ker0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seen
 
+<details>
+<summary> C++ 11 Trick 🎩 </summary>
+
+
+## How to Type *Range-based For Loop*?:
+
+```cpp
+Int array1 [5] [1, 2, 3, 4, 5];
+for(/*datatype: */auto /* Variablename: */ Kixawi : /* Collection : */ array1)
+{
+cout<< /* Variablename: */ Kixawi ;
+}
+```
+
+Output -->  12345
+</details>
+
+2. - [x] **`While Loop`**
+
+```cpp
+int    i = 0;               // 1- Initialization before the loop
+while (i < 5)              // 2- Condition check: if true → execute body, else → exit
+{
+    cout << "Ker0seen ";  // 3- Loop body gets executed
+    i++;                 // 4- Increment variable → eventually breaks the loop
+}
+// 5- After each iteration → re-check the condition (Step 2)
+```
+
+Output → Ker0seen Ker0seen Ker0seen Ker0seen Ker0seen
+
+
+<details> 
+<summary> Infinite Loop Danger! 💀 </summary>
+
+```cpp
+int i = 0;
+while (i < 5)
+{
+    cout << "Ker0seen ";
+    // i++; ← ⚠️ Forgot this? The loop will never end!
+}
+```
+-💡 Always make sure the variable inside the condition is changing during each iteration!
+
+</details> 
+
+3. - [x] **`Do-While Loop`**
+
+```cpp
+int i = 0;
+do
+{
+    cout << "Ker0seen "; // 1- Executes the body at least once
+    i++;                 // 2- Increment
+} while (i < 3);         // 3- Condition check AFTER the body
+
+```
+Output → Ker0seen Ker0seen Ker0seen
+
+## CONDITIONS:
+
+1. - [x] **`If-Else Condition`**
+
+```cpp
+int score = 85;
+
+if (score >= 90)
+{
+    cout << "Grade: A";
+}
+else if (score >= 80)
+{
+    cout << "Grade: B";
+}
+else
+{
+    cout << "Keep trying!";
+}
+
+
+```
+Output → Grade: B
+
+2. - [x] **`Switch Condition`**
+
+```cpp
+int option = 2;
+
+switch (option)
+{
+    case 1:
+        cout << "Play Game";
+        break;
+    case 2:
+        cout << "Load Game";
+        break;
+    case 3:
+        cout << "Quit";
+        break;
+    default:
+        cout << "Invalid Option";
+        break; //  ⚠️ Don’t Forget Break!
+}
 
 
 
 ```
+Output → Grade: B

@@ -10,7 +10,7 @@
 
 `;` is put to end a statement, but it isn't needed in :
 
-- Declaration blocks: Function Definitions, Special Variables
+- Declaration blocks: Function Definitions, Special Variables, Loops. Conditions
 - Preprocessor lines like #include <iostream>
 
 ### How To Type Special Variables :
@@ -121,13 +121,14 @@ typedef struct
 int main()
 {
 Photo p1 = {1920, 1080, blue} ; //don't forget the ;
-cout<<p1.color<<endl;
+cout<<p1.color;
 cout<<p1.width;
 return 0;
 }
 ```
-Output --> 2
-           1920
+Output --> 
+2
+1920
 	   
 5. - [x] **`auto`**
 is used to automatically deduce the type of the variable based on the value assigned
@@ -148,6 +149,7 @@ int main()
 }
 ```
 Output -->
+
 the size of Var1 = 4bytes
 
 the size of Var2 = 8bytes
@@ -205,9 +207,9 @@ Output --> Ker0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0s
 
 ```cpp
 Int array1 [5] [1, 2, 3, 4, 5];
-for(/*datatype: */auto /* Variablename: */ Kixawi : /* Collection : */ array1)
+for(/*datatype --> */auto /* Variablename : --> */ Kixawi : /* Collection --> */ array1)
 {
-cout<< /* Variablename: */ Kixawi ;
+cout<< /* Variablename --> */ Kixawi ;
 }
 ```
 
@@ -233,12 +235,7 @@ Output → Ker0seen Ker0seen Ker0seen Ker0seen Ker0seen
 <summary> Infinite Loop Danger! 💀 </summary>
 
 ```cpp
-int i = 0;
-while (i < 5)
-{
-    cout << "Ker0seen ";
     // i++; ← ⚠️ Forgot this? The loop will never end!
-}
 ```
 -💡 Always make sure the variable inside the condition is changing during each iteration!
 
@@ -256,6 +253,16 @@ do
 
 ```
 Output → Ker0seen Ker0seen Ker0seen
+
+## 🔁 Loop Comparison: `for` vs `while` vs `do-while`
+
+| Feature / Parameter      | `for` loop                                 | `while` loop                              | `do-while` loop                             |
+|--------------------------|---------------------------------------------|-------------------------------------------|---------------------------------------------|
+| 🔹 **Condition Check**     | Before loop starts                         | Before loop starts                         | **After** loop body runs once               |
+| 🔁 **Use Case**            | When number of iterations is known         | When condition depends on runtime          | When body **must run at least once**        |
+| 🧰 **Common Applications** | Iterating arrays, counters, loops w/ steps | Waiting for valid input, real-time checks  | Login prompts, retry confirmations          |
+| 🎯 **Syntax Control**      | Initialization, condition, increment in 1 line | Separate, more flexible               | Loosely structured, may be harder to track  |
+
 
 ## CONDITIONS:
 
@@ -284,25 +291,53 @@ Output → Grade: B
 2. - [x] **`Switch Condition`**
 
 ```cpp
-int option = 2;
-
-switch (option)
+#include <iostream> 
+using namespace std;
+int main () 
 {
-    case 1:
-        cout << "Play Game";
-        break;
-    case 2:
-        cout << "Load Game";
-        break;
-    case 3:
-        cout << "Quit";
-        break;
-    default:
-        cout << "Invalid Option";
-        break; //  ⚠️ Don’t Forget Break!
-}
+    double first_num;
+    double second_num;
+    char operation ;
+    
+    cout<<"enter the first num : ";
+    cin>> first_num;
+    cout<<"enter the operator : ";
+    cin>> operation;
+    cout<<"enter the Second num : ";
+    cin>> second_num;
 
+    switch (operation)
+    {
+        case '+' :
+            cout<< first_num + second_num; 
+            break; // ⚠️ Don’t Forget Break! 
+        
+        case '-' :
+            cout<< first_num - second_num; 
+            break;
+            
+        case '*' :
+            cout<< first_num * second_num;  
+            break;
+
+        case '/':
+          if (second_num == 0)
+          {
+            cout<< "❌ Invalid";
+          }
+          else
+          {
+            cout<< first_num / second_num; 
+          }
+            break;
+        default: // 🔸 It’s not required, but it’s considered best practice to always include a default case, even if it just handles unexpected input -->	Instead of nothing happening, the user sees a clear message like ❌ Invalid operator!
+            cout << "❌ Invalid operator!" << endl;
+    }
+
+
+    return 0;
+ }
 
 
 ```
-Output → Grade: B
+

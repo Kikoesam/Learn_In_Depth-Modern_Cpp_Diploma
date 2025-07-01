@@ -1,9 +1,9 @@
-```Cpp
-#include <iostream>
-// Tells the preprocessor to copy the content of another file (usually a header file)
-```
+#include < library >
+
+
 ### Why <> instead of ""? `Interview Question`
-```Cpp
+
+```cpp
 #include <iostream>     // Tells the compiler to include the standard I/O library
 #include "MyHeader.hpp" // Tells the compiler to look for this file in your current folder or project --> Typically used for your own custom headers.
 ```
@@ -159,13 +159,34 @@ the size of Var4 = 4bytes
 the size of Var5 = 8bytes
 
 
-## <details>
-  <summary>🧠 **REFLECTION (DAY 5)** 🔍</summary>
+<details>
+<summary> 🔍👓🔎 </summary>
+	
+## How to Cout a whole sentence?:
+	
+```cpp
+#include <string>
+int main ()
+{
+String str;
+getline(cin, str);
+cout<< str;
+return 0;
+}
+```
 
-## 🧠 REFLECTION (DAY 5)
+Input  --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 
-- Realized how `shared_ptr` uses reference counting.
-- Rewatched a tutorial — still unclear about cycles.
-- Will journal the confusion and come back tomorrow.
-
+Output --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 </details>
+
+
+## LOOPS:
+5. - [x] **`For Loop`**
+
+```cpp
+
+
+
+
+```

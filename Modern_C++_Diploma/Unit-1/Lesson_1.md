@@ -364,10 +364,11 @@ int main()
 {
     int x = 5;   // Local variable shadows the global one
     cout << x;   // Prints 5 (the local variable), //Ok, but How to print the Global Variable?
-    cout << ::x; // prints 0 (the global variable)
+    cout << ::x; // prints 0 (the global variable) →
     return 0;
 }
 ```
+`::` → Scope Resolution operator → tells the compiler: _**“Don’t look in the local scope, go to the global one.”**_
 </details> 
 
 

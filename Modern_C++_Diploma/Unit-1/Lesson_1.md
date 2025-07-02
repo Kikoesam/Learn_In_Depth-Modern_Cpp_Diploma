@@ -351,5 +351,23 @@ Enter the first num : 23
 Output          →     27
  
 
+<details> 
+<summary> 🗿 Local & Global 🌐 Variables </summary>
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int x = 0; // Global variable
+
+int main()
+{
+    int x = 5;   // Local variable shadows the global one
+    cout << x;   // Prints 5 (the local variable), //Ok, but How to print the Global Variable?
+    cout << ::x; // prints 0 (the global variable)
+    return 0;
+}
+```
+</details> 
 
 

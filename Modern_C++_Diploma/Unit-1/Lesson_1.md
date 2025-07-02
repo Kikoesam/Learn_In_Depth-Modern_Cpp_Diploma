@@ -33,7 +33,7 @@ int main()
   cout<<Orange.Shape<<endl;
 }
 ```
-Output --> Orange
+Output → Orange
 
 2. - [x] **`Union`**
 
@@ -63,7 +63,7 @@ cout<<Orange.name<<endl;
 return 0;
 }
 ```
-Output --> Orange
+Output → Orange
 
 3. - [x] **`Enum`**
 ```cpp
@@ -85,7 +85,7 @@ cout<<TV;
 return 0;
 }
 ```
-Output --> 4
+Output → 4
 
 4. - [x] **`Typedef`**
 
@@ -99,7 +99,7 @@ cout<< KIX ;
 return 0;
 }
 ```
-Output --> 5
+Output → 5
 
 ## ✅ Tasks
 + Write  A Combined Example
@@ -126,7 +126,7 @@ cout<<p1.width;
 return 0;
 }
 ```
-Output --> 
+Output →
 2
 1920
 	   
@@ -148,7 +148,7 @@ int main()
    cout<< "the size of Var5 = "<<sizeof(var5)<<"bytes" ;
 }
 ```
-Output -->
+Output →
 
 the size of Var1 = 4bytes
 
@@ -177,9 +177,9 @@ return 0;
 }
 ```
 
-Input   --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
+Input  → Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 
-Output --> Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
+Output → Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 </details>
 
 
@@ -197,7 +197,7 @@ for
 cout<<"Ker0seen"; // 3- implementing the body, 6-If the condition is true --> implement the body if not then break of the loop
 }
 ```
-Output --> Ker0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seen
+Output → Ker0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seenKer0seen
 
 <details>
 <summary> C++ 11 Trick 🎩 </summary>
@@ -213,7 +213,7 @@ cout<< /* Variablename --> */ Kixawi ;
 }
 ```
 
-Output -->  12345
+Output →  12345
 </details>
 
 2. - [x] **`While Loop`**
@@ -290,6 +290,8 @@ Output → Grade: B
 
 2. - [x] **`Switch Condition`**
 
+**Calculator Program**
+
 ```cpp
 #include <iostream> 
 using namespace std;
@@ -299,11 +301,11 @@ int main ()
     double second_num;
     char operation ;
     
-    cout<<"enter the first num : ";
+    cout<<"Enter the first num : ";
     cin>> first_num;
-    cout<<"enter the operator : ";
+    cout<<"Enter the operator : ";
     cin>> operation;
-    cout<<"enter the Second num : ";
+    cout<<"Enter the Second num : ";
     cin>> second_num;
 
     switch (operation)
@@ -330,14 +332,24 @@ int main ()
             cout<< first_num / second_num; 
           }
             break;
-        default: // 🔸 It’s not required, but it’s considered best practice to always include a default case, even if it just handles unexpected input -->	Instead of nothing happening, the user sees a clear message like ❌ Invalid operator!
+        default:
+                /* 🔸 It’s not required, but it’s considered best practice to always include a default case, even if it just handles unexpected input
+		      --> Instead of nothing happening, the user sees a clear message like ❌ Invalid operator! */
             cout << "❌ Invalid operator!" << endl;
     }
 
 
     return 0;
  }
-
-
 ```
+Enter the first num : 5
+
+Enter the operator  : +
+
+Enter the first num : 23
+
+Output          →     27
+ 
+
+
 

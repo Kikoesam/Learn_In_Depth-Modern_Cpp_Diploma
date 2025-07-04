@@ -21,7 +21,7 @@ int main()
 }
 ```
 #### 🖥️ Code Output
-```ini
+```json
 input  --> i Love Learn-in-depth 
 Output --> i Love Learn-in-depth 
 ```

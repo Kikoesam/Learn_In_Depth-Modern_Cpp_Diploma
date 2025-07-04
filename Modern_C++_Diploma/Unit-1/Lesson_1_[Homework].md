@@ -52,7 +52,7 @@ int main()
 }
 ```
  #### 🖥️ Code Output
-```ini
+```json
 input -->
 Enter the first number
 5
@@ -85,7 +85,7 @@ int main()
 }
 ```
  #### 🖥️ Code Output
-```ini
+```json
 input -->
 Enter the first number
 2.4
@@ -118,7 +118,7 @@ int main()
 }
 ```
  #### 🖥️ Code Output
-```ini
+```json
 input -->
 Enter the first number
 2.4
@@ -152,7 +152,7 @@ int main()
 }
 ```
  #### 🖥️ Code Output
-```ini
+```json
 input -->
 Enter a character : &
 Output --> 38
@@ -187,7 +187,7 @@ int main()
 }
 ```
  #### 🖥️ Code Output
-```ini
+```json
 input -->
 Enter the first num : 1.20
 Enter the second num : 2.45

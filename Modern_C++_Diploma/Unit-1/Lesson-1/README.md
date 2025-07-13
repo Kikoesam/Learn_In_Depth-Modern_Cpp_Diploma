@@ -189,8 +189,8 @@ Output → Kixawi The Smartest Software Engineer Everrrrrrrrrrrrrrrrrrrrrrr
 ```cpp
 for
 (
-   int i = 0;  // 1-initialization of the variable
-    i < 10     // 2-checking the condition, 5- check the condition again
+    int i = 0;  // 1-initialization of the variable
+    i < 10  ;  // 2-checking the condition, 5- check the condition again
     i++        // 4-increment of the variable (1) by 1
 )
 {
@@ -295,6 +295,15 @@ Output → Grade: B
 ```cpp
 #include <iostream> 
 using namespace std;
+
+enum operations 
+{
+  Plus = '+',
+
+
+
+};
+
 int main () 
 {
     double first_num;
@@ -310,7 +319,7 @@ int main ()
 
     switch (operation)
     {
-        case '+' :
+        case Plus :
             cout<< first_num + second_num; 
             break; // ⚠️ Don’t Forget Break! 
         

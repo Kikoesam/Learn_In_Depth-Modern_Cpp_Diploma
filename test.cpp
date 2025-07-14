@@ -3,35 +3,19 @@ using namespace std;
 
 // enter code __> cin 1-7 cout days without switch with enum
 
-
-enum days 
+void func (int a)
 {
-
-  saturday = 1,
-  sunday,
-  monday,
-  tuesday,
-  wednesday,
-  thursday,
-  friday
-
-};
+  static int x = 10;
+  x++;
+  cout<<x;
+}
 
 int main ()
 {
+   
+    func (10);  
+    func (10);  
 
-
-int x;
-cout<<"Enter the Number Of the Day"<<endl;
-cin>>x;
-
-
-for ( enum days i = saturday; i < 8; i= (days)((int)i + 1))
-{
-  if ( x == i )
-  {
-    cout<<
-  }
+    return 0;
 }
 
-}

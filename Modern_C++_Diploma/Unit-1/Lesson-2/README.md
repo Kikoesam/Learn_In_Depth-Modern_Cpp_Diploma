@@ -8,7 +8,7 @@
 //Task Of the Function
   int sum;
   x + y = sum;
-//return value ⇢ (if you don't the function to return a value you can just put【void】as the 【type】of the function)
+//return value ⇢ (if you don't want the function to return a value you can just put【void】as the【type】of the function)
   return sum
 }
 ```
@@ -66,6 +66,8 @@ int main ()
     return 0;
 }
 ```
+Output → 5 3
+
 </details>
 
 
@@ -78,7 +80,7 @@ int main ()
 | 🧠 Concept            | 🔍 Definition                                                                 | ✅ Benefit                                                                 |
 |----------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 🔹 Linear Programming | Writing code line by line without structure.                                  | ❌ Hard to maintain, test, or scale. Not reusable.                        |
-| 🔹 Structured Programming | Uses control structures (`if`, `for`, `while`, `functions`) for clarity.     | ✅ Clean, readable, and maintainable code.                                |
+| 🔹 Structured Programming | Uses control structures (`if`, `for`, `while`, especially `functions`) for clarity.     | ✅ Clean, readable, and maintainable code.                                |
 | 🔹 Modularity         | Dividing code into small, logical units (like functions or modules).          | ✅ Easier to debug, reuse, and understand.                                |
 | 🔹 Reusability        | Writing a function once and calling it many times.                            | ✅ Avoids duplication and promotes efficiency.                            |
 | 🔹 Organisability     | Structuring code like a book, with each function acting like a chapter.       | ✅ Improves readability and makes larger codebases manageable.            |
@@ -95,28 +97,109 @@ int main ()
 | 🚀 Scalability       | Supports breaking big problems into manageable pieces.         |
 ---
 
+1. [x] **`Function Definition & Declarition `*
 
-3. [x] **`Function Definition & Declarition `**
-```cpp
-// function Prototype - declarition
-void func();
+!!! Example _**Example**_
 
-int main ()
-{
+    ```cpp
+    /* 
+    function Prototype - declarition
+    1- <You can declare the function above>
+    {This is a promise to the compiler: a function with this name, return type, and parameter list exists}
+    telling the compiler --> Trust me, I’ll define this later
 
-  return 0;
-}
+    Then The linker will link the function call with its definition
+    */
+    void func();
 
-// function Definition
-void func()
-{
+    int main ()
+    {
 
-}
+      return 0;
+    }
+
+    /* 
+    function Definition 
+    This is the actual body of the function — where logic lives.
+    1- <Must be above the main function> 【The definition must be above the function call】
+    because the compiler compiles the code line by line
+    so the compiler must see the function definition first so when it sees its declaration {in the main function} it can return back to the line where the function is
+    2- <One Definition Rule> function must be definied for onlt one time
+    */
+    void func()
+    {
+
+    }   
 
 
-```
+    ```
+## 1️⃣ Types of Variables in C++
+🔍 _**Mutability refers to whether a variable's value can be changed after it is created.**_
+
+
+| Type            | Description                                                                 | Lifetime               | Scope                    | Mutability  |
+|------------------|------------------------------------------------------------------------------|-------------------------|---------------------------|-------------|
+| `local`         | Declared inside a function                                                   | Until function returns the value {ends}  | Function only             | ✅ Mutable  |
+| `global`        | Declared outside any function                                                | Entire program          | All files (if not `static`) | ✅ Mutable |
+| `const`         | Cannot change after initialization                                           | Same as declared scope  | Local or global           | ❌ Immutable |
+| `static (local)`| Keeps its value between function calls                                       | Entire program          | Function only             | ✅ Mutable  |
+
+
+
 
 <details>
 <summary> ¯\_(͠≖ ͜ʖ͠≖)_/¯ </summary>
 	
 </details>
+
+
+
+
+
+
+
+
+!!! note "Important"
+    This is an informational block.
+
+!!! tip "Pro Tip"
+    Useful advice for the reader.
+
+!!! warning "Caution"
+    Be careful with ambiguous overloads.
+
+!!! danger "Watch Out"
+    This can cause runtime crashes or undefined behavior.
+
+!!! info "Extra"
+    Here’s some extra context or curiosity.
+    
+!!! info "Extra"
+    Here’s some extra context or curiosity.
+> ⚠️ **Warning:** Dangerous code ahead.
+
+## 🧠 Concept Title Here
+
+!!! note "Definition"
+    A short explanation of the concept.
+
+!!! tip "Use Case"
+    When and where to apply it.
+
+!!! example "Example"
+    ```cpp
+    void greet() {
+        cout << "Hello";
+    }
+    ```
+
+!!! warning "Common Pitfall"
+    Do NOT pass uninitialized pointers to functions!
+
+!!! info "Extra Insight"
+    `const T&` allows passing temporaries safely.
+
+> 💡 **Note:** This is a note block.
+>
+> ⚠️ **Warning:** Dangerous code ahead.
+> 🚀 **Tip:** Prefer `const T&` for large objects.

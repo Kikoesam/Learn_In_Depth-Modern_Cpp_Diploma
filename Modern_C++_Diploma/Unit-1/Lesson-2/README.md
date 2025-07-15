@@ -180,26 +180,25 @@ Output → 5 3
 
 ## 🧠 Concept Title Here
 
-!!! note "Definition"
-    A short explanation of the concept.
-
-!!! tip "Use Case"
-    When and where to apply it.
-
-!!! example "Example"
-    ```cpp
-    void greet() {
-        cout << "Hello";
-    }
-    ```
-
-!!! warning "Common Pitfall"
-    Do NOT pass uninitialized pointers to functions!
-
-!!! info "Extra Insight"
-    `const T&` allows passing temporaries safely.
-
+> [!NOTE]
+> This is a note block — it shows up in blue on supported platforms.
+markdown
+Copy
+Edit
+> [!WARNING]
+> Do NOT pass uninitialized pointers to functions!
+markdown
+Copy
+Edit
+> [!IMPORTANT]
+> This is important information for your code.
+markdown
+Copy
+Edit
+> [!CAUTION]
+> Be cautious when using raw pointers in modern C++.
 > 💡 **Note:** This is a note block.
 >
 > ⚠️ **Warning:** Dangerous code ahead.
 > 🚀 **Tip:** Prefer `const T&` for large objects.
+ 

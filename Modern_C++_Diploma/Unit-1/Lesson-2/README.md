@@ -100,7 +100,6 @@ Output → 5 3
 3. [x] **`Function Definition & Declarition `*
 
 > [!IMPORTANT]
-> This is important information for your code.
 >```cpp
 >
 >/* 
@@ -182,31 +181,31 @@ Output → 5 3
 >
 >
 >> [!NOTE]
-> ### 🧠 What Does `inline` Really Do?
-> 
-> #### 🧩 Replaces Function Call with Code
-> - Inlining means the **compiler copies the function’s logic directly** into the place it's called.
-> - No function call, no return — just the actual code pasted inline.
-> 
-> ```cpp
-> inline int add(int a, int b) { return a + b; }
-> int result = add(2, 3); // becomes: int result = 2 + 3;
-> ```
-> 
-> ---
-> 
-> #### 🚀 Why Use `inline`? (Optimization)
-> - Skips function call overhead:
->   - No register save
->   - No stack frame
->   - No jump and return
-> - Speeds up small, repeated functions — e.g., math helpers, getters.
-> 
-> ---
-> 
-> #### 🛠 How It Helps Compiler Optimizations
-> - In the **IR stage**, the compiler replaces function calls with instructions directly.
-> - Allows deeper optimizations:
+>> ### 🧠 What Does `inline` Really Do?
+>> 
+>> #### 🧩 Replaces Function Call with Code
+>> - Inlining means the **compiler copies the function’s logic directly** into the place it's called.
+>> - No function call, no return — just the actual code pasted inline.
+>> 
+>> ```cpp
+>> inline int add(int a, int b) { return a + b; }
+>> int result = add(2, 3); // becomes: int result = 2 + 3;
+>> ```
+>> 
+>> ---
+>> 
+>> #### 🚀 Why Use `inline`? (Optimization)
+>> - Skips function call overhead:
+>>   - No register save
+>>   - No stack frame
+>>   - No jump and return
+>> - Speeds up small, repeated functions — e.g., math helpers, getters.
+>> 
+>> ---
+>> 
+>> #### 🛠 How It Helps Compiler Optimizations
+>> - In the **IR stage**, the compiler replaces function calls with instructions directly.
+>> - Allows deeper optimizations:
 >   - ✅ Constant folding: `add(2, 3)` → `5`
 >   - ✅ Dead code removal
 >   - ✅ Loop unrolling

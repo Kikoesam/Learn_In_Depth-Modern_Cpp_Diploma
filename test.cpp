@@ -3,19 +3,17 @@ using namespace std;
 
 // enter code __> cin 1-7 cout days without switch with enum
 
-void func (int a)
+int Volume (int x, int y, int z = 1)
 {
-  static int x = 10;
-  x++;
-  cout<<x;
+  int Volume;
+  Volume = x * y * z;
+  return Volume;
 }
 
-int main ()
+int main()
 {
-   
-    func (10);  
-    func (10);  
-
-    return 0;
+  cout<<Volume(3, 3);
+  return 0;
 }
+
 

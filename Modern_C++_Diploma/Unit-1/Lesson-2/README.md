@@ -97,7 +97,7 @@ Output → 5 3
 | 🚀 Scalability       | Supports breaking big problems into manageable pieces.         |
 ---
 
-3. [x] **`Function Definition & Declarition `*
+3. [x] _**`Function Definition & Declarition `**_
 
 > [!IMPORTANT]
 >```cpp
@@ -151,134 +151,69 @@ Output → 5 3
 > ### 🧠 Understanding `inline` Functions in C++
 >
 > #### 🔹 What is `inline`?
-> - The `inline` keyword is a **compiler hint** suggesting that the function's **code should be expanded in-place** where it’s called — instead of performing a regular function call.
-> - It's **not a command**, just a **suggestion**. The compiler can ignore it.
+> - The `inline` keyword is a _**compiler hint**_ suggesting that the function's **code should be expanded in-place** where it’s called {the compiler replaces function calls with instructions directly} instead of performing a regular function call 
+>-  No function call, no return — just the actual code pasted inline
+>  ```cpp
+> inline int add(int a, int b) { return a + b; }
+> int result = add(2, 3); // becomes: int result = 2 + 3; ➻ Intermediate Representation (IR)
+> ```
 >
 > #### 🚀 Why Use `inline`? (Optimization Goal)
-> - To **reduce function call overhead**, especially in small, frequently-called functions.
-> - Skips the stack frame setup, jump, and return process of normal calls.
->
-> #### 🧠 What Is Function Call Overhead?
-> - Every function call costs:
->   - Saving registers
->   - Jumping to a new address
->   - Allocating a call stack frame
-> - For **tiny functions** (like `getX()`), this overhead is larger than the logic itself!
->
-> #### 🛠 Relation to Intermediate Representation (IR)
-> - In **IR**, inlining replaces a function call with the actual IR instructions.
-> - This allows the optimizer to perform **constant folding**, **dead code elimination**, and more aggressive **loop unrolling**.
-> - Example:
->   ```cpp
->   inline int add(int a, int b) { return a + b; }
->   int x = add(1, 2); // IR becomes: int x = 3;
->   ```
->
+> - Skips _**function call overhead**_ :
+>   - No register save
+>   - No stack frame
+>   - No jump and return
+> - 〚Every function call costs more instructions to be done rather than doing the simple function〛
+> 
 > #### 🔄 Inline & Function Overloading
 > - `inline` works with **overloaded functions**.
 > - The compiler still resolves the **best match** using matching rules.
 > - It can choose to inline one overload and not another depending on size or complexity.
 >
->
->> [!NOTE]
->> ### 🧠 What Does `inline` Really Do?
->> 
->> #### 🧩 Replaces Function Call with Code
->> - Inlining means the **compiler copies the function’s logic directly** into the place it's called.
->> - No function call, no return — just the actual code pasted inline.
->> 
->> ```cpp
->> inline int add(int a, int b) { return a + b; }
->> int result = add(2, 3); // becomes: int result = 2 + 3;
->> ```
->> 
->> ---
->> 
->> #### 🚀 Why Use `inline`? (Optimization)
->> - Skips function call overhead:
->>   - No register save
->>   - No stack frame
->>   - No jump and return
->> - Speeds up small, repeated functions — e.g., math helpers, getters.
->> 
->> ---
->> 
->> #### 🛠 How It Helps Compiler Optimizations
->> - In the **IR stage**, the compiler replaces function calls with instructions directly.
->> - Allows deeper optimizations:
->   - ✅ Constant folding: `add(2, 3)` → `5`
->   - ✅ Dead code removal
->   - ✅ Loop unrolling
-> 
-> ---
-> 
-> ### 💡 When to Use It?
-> - Use `inline` for:
->   - Tiny functions (1–3 lines)
->   - Getters/setters
->   - Utility functions in headers
-> - Don’t use it for:
->   - Big functions (code bloat)
->   - Functions used only once (pointless)
-
->
->
-> ---
->
-> ### 🧪 Inline vs Debug/Release Modes
->
-> | Mode       | Optimization | Inlining Behavior       | Goal                        |
-> |------------|--------------|--------------------------|-----------------------------|
-> | `Debug`    | ❌ No         | 🔁 Functions are **not** inlined | Easier debugging, readable stack traces |
-> | `Release`  | ✅ Yes        | ✅ **Auto-inlining** enabled (even without `inline`) | Faster performance, smaller call overhead |
->
-> - 🔧 **In Debug Mode**, inlining is avoided so you can **step through** your function calls.
-> - ⚡ **In Release Mode**, the compiler may inline aggressively, even for functions **not marked as `inline`**.
->
-> ---
->
-> ### 📝 Summary:
-> - Use `inline` for **very small, performance-critical functions**
-> - Let the compiler decide — it’s smarter in Release mode
-> - Inlining boosts optimization but hides stack traces in debugging
-> - Debug builds skip inlining for clarity, Release builds inline for speed
-
-
-
-
-
-
-
-
+>>> 🔍 **Function Overloading:** allows us to define two or more functions with the same name as long as they have different parameter list (in either the number or types of parameters) 
+---
 
 
 <details>
 <summary> ¯\_(͠≖ ͜ʖ͠≖)_/¯ </summary>
-	
+
+### ***`Function Default Arguments`***
+```cpp
+int Volume (int x, int y, int z = 1 /* Default argument*/)
+{
+  int Volume;
+  Volume = x * y * z;
+  return Volume;
+}
+
+int main()
+{
+  cout<<Volume(2, 5); // passed 2 arguments to a 3 parameters function
+  return 0;
+}
+```
 </details>
 
+---
+ 
 
-> ⚠️ **Warning:** Dangerous code ahead.
 
-## 🧠 Concept Title Here
+
+
+> #### 🔹 Name Mangling
+
+> #### 🔹 Deleted Functions (`= delete`)
+
 
 > [!NOTE]
-> This is a note block — it shows up in blue on supported platforms.
-markdown
-Copy
-Edit
+>  : 
+ 
 
 > [!WARNING]
 > Do NOT pass uninitialized pointers to functions!
-markdown
-Copy
-Edit
-
+ 
 > [!IMPORTANT]
 > This is important information for your code.
-markdown
-Copy
-Edit
 
 > [!CAUTION]
 > Be cautious when using raw pointers in modern C++.

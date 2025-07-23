@@ -197,6 +197,25 @@ int main()
 ---
  
 
+![Lesson 1](https://img.shields.io/badge/Lesson_1-100%25-brightgreen)
+![Lesson 2](https://img.shields.io/badge/Lesson_2-80%25-blue)
+![Lesson 3](https://img.shields.io/badge/Lesson_3-Coming_soon-lightgrey)
+![Hours Logged](https://img.shields.io/badge/Study_Hours-21_hrs-orange)
+![Challenge](https://img.shields.io/badge/Week_2_Challenge-Completed-brightgreen)
+![Challenge](https://img.shields.io/badge/Week_3_Challenge-In_Progress-yellow)
+![Focus](https://img.shields.io/badge/Focus-High-brightgreen)
+![Mood](https://img.shields.io/badge/Mood-Motivated-blue)
+
+## 🧠 Lesson 2 – C++ Loops & Conditions
+
+![Progress](https://img.shields.io/badge/Progress-85%25-blue)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
+![Hours Logged](https://img.shields.io/badge/Hours-6_hrs-orange)
+![Mood](https://img.shields.io/badge/Mood-Focused-brightgreen)
+
+> 🚀 Working through Lesson 2 of the Learn-In-Depth C++ Diploma  
+> Topics: If/Else, Loops, Creative Markdown Practice  
+> Focus: Clarity, Code Comments, and Clean GitHub Logs  
 
 
 

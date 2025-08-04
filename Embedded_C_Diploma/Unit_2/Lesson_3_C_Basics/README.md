@@ -17,10 +17,26 @@ implicitly converted to unsigned)
 > //if you want to scanf a double you need to add the %lf not %d (for integers)
 > printf("the value of the x is : %d", int(x));
 > ```
->```json
+>```css
 > Output :add the value of this x :4.53
 >        :the value of the x is : 4
 >```
+ </details>
+
+> [!NOTE]
+>
+><details> 
+> 
+>![Challenge](https://img.shields.io/badge/Note_2-Completed-brightgreen)
+>
+><summary> ¯\_( ͡° ͜ʖ ͡°)_/¯ </summary>
+>
+> #### postfix and prefix  
+>| Type              | Syntax | Description                       | Returned Value         |
+>|-------------------|--------|-----------------------------------|------------------------|
+>| Pre-Increment     | `++x`  | 1.Increment first, 2.then return  | New (after increment)  | 
+>| Post-Increment    | `x++`  | Return first, then increment      | Old (before increment) |
+> 💡 **Best Practice:** Always avoid using `x++` and `++x` {on the same variable within a single expression} because it leads to undefined behavior
  </details>
 
 | Format / Escape | Purpose  | Used In     | Example Use   | Notes / Output Insight |
@@ -123,8 +139,8 @@ implicitly converted to unsigned)
 >printf("Padding:\t%05.2f %.2f %5.2f\n", 1.5, 1.5, 1.5);
 >printf("Scientific:\t%E %e\n", 1.5, 1.5);
 >printf("Special values:\t 1/0=%g\n", 0.0/0.0, 1.0/0.0);
->printf ("C_trick:\t %d %d %d \n", ++x,x,x++);
->printf ("C_trick:\t%d %d %d \n",x++,++x,x);
+>printf("C_trick:\t %d %d %d \n", ++x,x,x++);
+>printf("C_trick:\t%d %d %d \n",x++,++x,x);
 >return 0;
 >}
 >```

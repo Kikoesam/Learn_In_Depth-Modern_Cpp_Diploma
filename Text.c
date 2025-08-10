@@ -1,21 +1,10 @@
-
-#include "stdio.h"
+#include <stdio.h>
+int N1;
+int N2;
 int main()
 {
-
-   /*
-       1 2 3
-       2 3
-       3
-   */
-   for (int i = 0; i<10; i++)
-   {
-      for (int j = i ; j<10; j++)
-      {
-         printf(" %d",j);
-      }
-      printf("\n");
-   }
-
-return 0;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &N1, &N2);
+    printf("You entered: %d" , N1 + N2);
+    return 0;
 }

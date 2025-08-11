@@ -1,23 +1,25 @@
 #include <stdio.h>
-//Write Source Code to Swap Two Numbers
-/*Enter value of a: 1.20
-Enter value of b: 2.45
+int a,b,c;
 
-After swapping, value of a = 2.45
-After swapping, value of b = 1.2*/ 
- float a,b;
- float swapper;
- int main()
+int main()
 {
-    printf("Enter value of a: ");
-    scanf("%f",&a);
-    printf("Enter value of b: ");
-    scanf("%f", &b);
-
-        swapper=b;
-        b=a;
-        a=swapper;
-        printf("After swapping, value of a = %f\n",a);
-        printf("After swapping, value of b = %f\n",b);
-
+    printf("add the three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a>b)
+    {
+        if (a>c)
+        printf("a is the biggest number");
+        else 
+        printf("c is the biggest number");
+    }
+    else if (b>c)
+    {
+        if (b>a)
+        printf("b is the biggest number");
+        else
+        printf("a is the biggest number");
+    }
+    else
+    printf("c is the biggest number ");
+    return 0;
 }

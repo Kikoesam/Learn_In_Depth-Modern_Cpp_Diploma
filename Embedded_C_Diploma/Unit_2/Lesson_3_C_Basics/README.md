@@ -39,6 +39,47 @@ implicitly converted to unsigned)
 > 💡 **Best Practice:** Always avoid using `x++` and `++x` {on the same variable within a single expression} because it leads to undefined behavior
  </details>
 
+ > [!NOTE] inline / conditional operator ( ternary operator ) 
+>
+><details> 
+> 
+>![Challenge](https://img.shields.io/badge/Note_3-Completed-brightgreen)
+>
+><summary> ¯\_( ͡° ͜ʖ ͡°)_/¯ </summary>
+>
+> #### ternary operator
+>```c
+>(condition) ? expression_if_true : expression_if_false;
+>```
+>- condition → something that’s either true or false
+>- ? → separates the condition from what to do if it’s true
+>- : → separates what to do if it’s false
+>```c
+>#include <stdio.h> 
+>//give me the grade type 
+> int grade;
+> char choice;
+> int main()
+>{
+>    printf("give me the grade: ");
+>    scanf("%d",&grade );
+>    printf("Grade: %s",(grade >= 90) ? "A":
+>                       (grade >= 80) ? "B": 
+>                       (grade >= 70) ? "C":
+>                       (grade >= 60) ? "D": "F");
+>
+>    return 0;
+>}
+>```
+>Let’s say score = 85.
+>1. Check first condition:
+>`(score >= 90)` → false
+>→ go to the false branch: ``(score >= 80) ? "B" : ...``
+>2. Check second condition:
+>`(score >= 80)` → true
+>→ result is "B"
+ </details>
+
 | Format / Escape | Purpose  | Used In     | Example Use   | Notes / Output Insight |
 |------------------|----------|-------------|----------------------------------------|----------------------------|
 | `\n`|        New line              | `printf()`  | `printf("Line 1\nLine 2");`            | Moves cursor to next line              |
@@ -147,3 +188,6 @@ implicitly converted to unsigned)
 ></details> 
 
 
+// add emojis
+// do the img well
+// finish the massive example
